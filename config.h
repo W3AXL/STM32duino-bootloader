@@ -406,6 +406,21 @@
     #define LED_PIN             3
     #define LED_ON_STATE        0
 
+#elif defined TARGET_DEKO32
+/*
+    Deko32 PS/2 Keyboard Modboard
+
+    Status LED on PC13
+    USB ENUM pin PB15
+    No user button
+*/
+
+    #define HAS_MAPLE_HARDWARE  1
+    #define LED_BANK            GPIOC
+    #define LED_PIN             13
+    #define LED_ON_STATE        1
+    #define USB_DISC_BANK       GPIOB
+    #define USB_DISC_PIN        15
 
 #else
     #error "No config for this target"
